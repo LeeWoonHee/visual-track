@@ -1,0 +1,251 @@
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0turn;
+}
+//===================================================================
+//===================Apply Font Style================================
+//===================================================================
+@font-face {
+  font-family: 'bebasNeue';
+  font-style: normal;
+  font-weight: 400;
+  src: url('~@/assets/fonts/BebasNeue-Regular.ttf') format('truetype');
+  unicode-range: U+0041-005A, U+0061-007A;
+}
+
+@font-face {
+  font-family: 'fragmentMono';
+  font-style: normal;
+  font-weight: 400;
+  src: url('~@/assets/fonts/FragmentMono-Regular.ttf') format('truetype');
+  unicode-range: U+0041-005A, U+0061-007A;
+}
+
+@font-face {
+  font-family: 'notoSans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('~@/assets/fonts/NotoSans-Regular.ttf') format('truetype')
+}
+
+@font-face {
+  font-family: 'nanumSquareRound';
+  font-style: normal;
+  font-weight: 400;
+  src: url('~@/assets/fonts/NanumSquareRoundR.ttf') format('truetype');
+  unicode-range: U+AC00-D7A3;
+}
+
+@font-face {
+  font-family: 'spoqaHanSans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('~@/assets/fonts/SpoqaHanSansNeo-Bold.ttf') format('truetype'),
+  url('~@/assets/fonts/SpoqaHanSansNeo-Bold.otf') format('opentype');
+  unicode-range: U+AC00-D7A3;
+}
+
+
+//===================================================================
+//===================End Apply Font Style============================
+//===================================================================
+
+* {
+  font-family: 'bebasNeue', 'spoqaHanSans', sans-serif;
+  letter-spacing: 2px;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-frag {
+  font-family: 'fragmentMono', sans-serif !important;
+  letter-spacing: 0;
+}
+
+.font-notoSans {
+  font-family: 'notoSans', sans-serif !important;
+  letter-spacing: 0;
+}
+
+
+body {
+    height: 100%;
+    width: 100%;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  //#app {
+  //  height: calc(var(--vh, 1vh) * 100);
+  //  width: 100%;
+  //
+  //  #app-content {
+  //   height: calc(var(--vh, 1vh) * 100);
+  //    width: 100%;
+  //  }
+  //}
+}
+
+.blex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-justify-content: center;
+  justify-items: center;
+}
+
+.blex-right {
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  align-items: center;
+  align-content: center;
+  justify-content: flex-end;
+  justify-items: flex-end;
+}
+
+.blex-left {
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  align-items: center;
+  align-content: center;
+  justify-content: flex-start;
+  justify-items: flex-start;
+}
+
+.blex-top {
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  align-items: flex-start;
+  align-content: flex-start;
+  justify-content: center;
+  justify-items: center;
+}
+
+.blex-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  align-items: flex-end;
+  align-content: flex-end;
+  justify-content: center;
+  justify-items: center;
+}
+
+.blex-x-between {
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  justify-items: center;
+}
+
+.blex-x-around {
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  align-items: center;
+  align-content: center;
+  justify-content: space-around;
+  justify-items: center;
+}
+
+.blex-x-evenly {
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  align-items: center;
+  align-content: center;
+  justify-content: space-evenly;
+  justify-items: center;
+}
+
+.blex-y-between {
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  align-items: center;
+  align-content: space-between;
+  justify-content: center;
+  justify-items: center;
+}
+
+.blex-y-around {
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  align-items: center;
+  align-content: space-around;
+  justify-content: center;
+  justify-items: center;
+}
+
+.blex-y-evenly {
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  align-items: center;
+  align-content: space-evenly;
+  justify-content: center;
+  justify-items: center;
+}
+
+.blex-between {
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  align-items: center;
+  align-content: space-between;
+  justify-content: space-between;
+  justify-items: center;
+}
+
+.blex-around {
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  align-items: center;
+  align-content: space-around;
+  justify-content: space-around;
+  justify-items: center;
+}
+
+.blex-evenly {
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  align-items: center;
+  align-content: space-evenly;
+  justify-content: space-evenly;
+  justify-items: center;
+}
+
+.vs-tooltip {
+  font-size: 0.625vw !important;
+  padding: 10px;
+  font-family: "Noto Sans", sans-serif !important;
+  letter-spacing: 0 !important;
+  @media screen and (max-width: 1024px) {
+    font-size: 12px !important;
+  }
+}
+

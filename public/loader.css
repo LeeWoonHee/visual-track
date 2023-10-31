@@ -1,0 +1,58 @@
+#loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: calc(var(--vh) * 100);
+    background: #000;
+    z-index: 999;
+    color: #ffffff;
+    transition: opacity 1s ease-in-out;
+}
+
+#loading .top-line {
+    position: absolute;
+    top: calc(var(--vh) * 5);
+    left: 2.5vw;
+    transition: width 1s ease-in-out;
+    width: calc((var(--progress) / 100) * 95 * 1vw);
+    height: 1px;
+    background: #ffffff;
+}
+
+#loading .bottom-line {
+    position: absolute;
+    bottom: calc(var(--vh) * 5);
+    right: 2.5vw;
+    transition: width 1s ease-in-out;
+    width: calc((var(--progress) / 100) * 95 * 1vw);
+    height: 1px;
+    background: #ffffff;
+}
+
+#loading .text-wrapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 0 2.5vw;
+    position: absolute;
+    bottom: calc(var(--vh) * 5);
+}
+
+#loading .text-wrapper .left-text {
+    font-size: 8vw;
+    font-weight: bold;
+}
+
+#loading .text-wrapper .right-text {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+}
+
+#loading .text-wrapper .right-text .right-text-progress {
+    font-size: 8vw;
+    font-weight: bold;
+}
